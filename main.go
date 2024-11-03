@@ -5,7 +5,13 @@ import (
 	"os"
 )
 
-type TokenType string
+type TokenType int
+
+const (
+	EOF TokenType = iota
+	SPACE
+	WORD
+)
 
 type Token struct {
 	kind   TokenType
